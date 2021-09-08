@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+	    Scanner z=new Scanner(System.in);
+	    int a,b,i,c=0;
+	    a=z.nextInt();
+	    b=z.nextInt();
+	    for(i=a;i<=b;i++){
+	        if(i>5){
+	            if(prime(i)==1)
+	                c++;
+	        }
+	        else if(i==5 || i==3 || i==2){
+	            c++;
+	        }
+	    }
+	    System.out.println(c);
+	}
+	public static int prime(int i){
+	    int f=1;
+	    for(int j=2;j<i/2;j++){
+	        if(i%j==0)
+	            f=0;
+	    }
+	    if(f==0)
+	        return 0;
+	    else
+	        return 1;
+	}
+}
