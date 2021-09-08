@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+	Scanner z=new Scanner(System.in);
+	String s,s1="";
+	s=z.nextLine();
+	String[] a=s.split("\\D+");
+	int b1,b2,b3;
+	b1=Integer.parseInt(a[0]);
+	b2=Integer.parseInt(a[1]);
+	b3=Integer.parseInt(a[2]);
+	if(b1+b2==b3)
+	    s1+="+";
+	else if(b1-b2==b3)
+	    s1+="-";
+	else if(b1*b2==b3)
+	    s1+="*";
+	else if(b1/b2==b3)
+	    s1+="/";
+	System.out.println(s1);
+	}
+}
