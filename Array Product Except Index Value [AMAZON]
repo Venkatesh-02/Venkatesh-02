@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+	Scanner z=new Scanner(System.in);
+	ArrayList<Integer> a=new ArrayList<Integer>();
+	while(z.hasNextInt())
+	    a.add(z.nextInt());
+	int[] b=new int[a.size()];
+	for(int i=0;i<a.size();i++){
+	    int c=1,t;
+	    for(int j=0;j<a.size();j++){
+	        t=a.get(j).intValue();
+	        c=c*t;
+	    }
+	    t=a.get(i).intValue();
+	    b[i]=c/t;
+	}
+	for(int i=0;i<b.length;i++)
+	    System.out.print(b[i]+" ");
+	}
+}
