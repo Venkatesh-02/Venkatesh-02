@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String s;
+	s=sc.next();
+	char[] t=new char[1];
+	char[] c=s.toCharArray();
+	for(int i=0;i<c.length;i++){
+	    for(int j=i+1;j<c.length;j++){
+	        if(c[i]<c[j]){
+	            t[0]=c[i];
+	            c[i]=c[j];
+	            c[j]=t[0];
+	        }
+	    }
+	}
+	for(int i=0;i<c.length;i++){
+	    if(t[0]!=c[i]){
+	        t[0]=c[i];
+	        System.out.print(c[i]);
+	    }
+    }
+    }
+}
