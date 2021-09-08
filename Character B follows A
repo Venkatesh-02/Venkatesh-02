@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+	Scanner z=new Scanner(System.in);
+	String s,s1="";
+	s=z.nextLine();
+	int i=0,a=0;
+	while(i<2){
+	    char c=z.next().charAt(0);
+	    s1+=c;
+	    i++;
+	}
+	for(i=0;i<s.length()-1;i++){
+	    if(s1.equals(s.substring(i,i+2)))
+	        a++;
+	}
+	System.out.println(a);
+	}
+}
